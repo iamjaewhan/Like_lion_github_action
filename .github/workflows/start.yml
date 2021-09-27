@@ -28,9 +28,9 @@ jobs:
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_USERNAME: GitHib Actions
+          DISCORD_USERNAME: JAEWAN
           DISCORD_AVATAR: https://cdn-icons-png.flaticon.com/512/25/25231.png
         uses: Ilshidur/action-discord@master
         with:
-          args: '안녕 GitHub Actions : {{ GITHUB_EVENT_NAME}}'
+          args: '안녕 GitHub Actions : {{ GITHUB_EVENT_NAME}} {{ RUNNER_NAME }}'
           
